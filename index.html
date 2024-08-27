@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="./output.css">
+    <title>Document</title>
+    <style>
+        .container .card {
+
+            animation: slide 30s linear infinite;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translate3d(0, 0, 0);
+            }
+
+            100% {
+                transform: translate3d(-5500px, 0, 0);
+                /* The image width */
+            }
+        }
+    </style>
+</head>
+
+<body class="w-[100vw] h-auto overflow-x-hidden relative z-10">
+    <div class="w-screen max-w-[100vw] h-auto box-border m-0 p-0 overflow-x-hidden">
+        <!-- navbar -->
+        <nav style="background-color: #2C2A28;"
+            class="w-full flex justify-around items-center gap-12 px-4 md:px-4 lg:px-8 xl:px-8 py-3 bg-greybg text-white overflow-x-hidden">
+            <div class="flex justify-start items-center gap-2">
+                <img class="h-[37px] md:h-[37px] lg:h-[57px] xl:h-[57px]" src="./assests/home/Logo.png" alt="logo">
+                <h2 class="whitespace-nowrap font-bold text-xs md:text-base lg:text-base xl:text-base ">SWARNDEEP
+                    CASTINGS <br class="hidden md:hidden lg:block xl:block">PRIVATE LIMITED</h2>
+            </div>
+            <img class="block md:block lg:hidden xl:hidden" src="./assests/home/hamburger-menu_svgrepo.com.png"
+                alt="bar" onclick="toggleMenu()">
+            <div class="hidden absolute top-14 text-white z-20 w-screen h-screen bg-black "
+                id="toggle">
+                <div class="flex flex-col justify-start items-start gap-5 text-[20px] px-10 py-10">
+                    <a class=" w-full" href="./index.html">
+                        <div class="font-semibold whitespace-nowrap text-primaryorange w-full border-b border-primaryorange pb-1"
+                            style="color: #EE7E1A; border: #EE7E1A;">
+                            Home</div>
+                    </a>
+                    <a href="./about.html">
+                        <div class="font-semibold whitespace-nowrap">About Us</div>
+                    </a>
+                    <a href="./services.html">
+                        <div class="font-semibold whitespace-nowrap">Services</div>
+                    </a>
+                    <a href="./infrastructure.html">
+                        <div class="font-semibold whitespace-nowrap">Infrastructure</div>
+                    </a>
+                    <a href="./certificate.html">
+                        <div class="font-semibold whitespace-nowrap">Certification</div>
+                    </a>
+                    <a href="./product.html">
+                        <div class="font-semibold whitespace-nowrap">Products</div>
+                    </a>
+                    <button style="background: linear-gradient(90deg, rgba(136,72,15,1) 0%, rgba(238,126,26,1) 50%, rgba(136,72,15,1) 100%);
+" class="bg-black px-6 py-2 rounded-md font-bold text-[16px] w-full">DOWNLOAD
+                        BROCHURE</button>
+                </div>
+            </div>
+            <div class="hidden md:hidden lg:block xl:block ">
+
+                <div class="flex justify-center items-center gap-5 text-[16px]">
+                    <a href="./index.html">
+                        <div class="font-semibold whitespace-nowrap text-primaryorange" style="color: #EE7E1A;">Home
+                        </div>
+                    </a>
+                    <a href="./about.html">
+                        <div class="font-semibold whitespace-nowrap">About Us</div>
+                    </a>
+                    <a href="./services.html">
+                        <div class="font-semibold whitespace-nowrap">Services</div>
+                    </a>
+                    <a href="./infrastructure.html">
+                        <div class="font-semibold whitespace-nowrap">Infrastructure</div>
+                    </a>
+                    <a href="./certificate.html">
+                        <div class="font-semibold whitespace-nowrap">Certification</div>
+                    </a>
+                    <a href="./product.html">
+                        <div class="font-semibold whitespace-nowrap">Products</div>
+                    </a>
+                </div>
+            </div>
+            <button style="background: linear-gradient(90deg, rgba(136,72,15,1) 0%, rgba(238,126,26,1) 50%, rgba(136,72,15,1) 100%);
+" class="bg-black px-6 py-2 rounded-md font-bold text-[16px] hidden md:hidden lg:block xl:block ">DOWNLOAD
+                BROCHURE</button>
+        </nav>
+        <!-- hero section -->
+        <section
+            class="max-w-full bg-black pl-0 md:pl-0 lg:pl-10 xl:pl-10 flex flex-col md:flex-col lg:flex-row xl:flex-row justify-end h-auto relative gap-2 pb-[2px] md:pb-[2px] lg:pb-[300px] xl:pb-[80vh]">
+            <div class="w-full md:w-full lg:w-[90%] xl:w-[90%] h-auto pt-10 pb-0 md:pb-0 lg:pb-48 xl:pb-48">
+                <div
+                    class="block md:block lg:absolute xl:absolute ml-0 md:ml-0 lg:ml-20 xl:ml-20 w-[95%] md:w-[95%] lg:w-[537px] xl:w-[537px]">
+                    <div
+                        class=" flex flex-col gap-2 md:gap-2 lg:gap-6 xl:gap-6 justify-center md:justify-center lg:justify-start xl:justify-start items-center md:items-center lg:items-start xl:items-start">
+                        <div
+                            class="text-[25px] md:text-[25px] lg:text-5xl xl:text-5xl font-bold text-white leading-[1.1] text-center md:text-center lg:text-start xl:text-start mx-auto md:mx-auto lg:mx-0 xl:ms-0">
+                            Crafting the Future of <br>
+                            <span
+                                class="bg-gradient-to-r from-[#88480F] via-[#EE7E1A] to-[#FED65C] bg-clip-text text-transparent text-center md:text-center lg:text-start xl:text-start">
+                                Industrial Casting
+                            </span>
+                            with <br> Expertise and Innovation
+                        </div>
+
+                        <p
+                            class="text-white text-center md:text-center lg:text-start xl:text-start hidden md:hidden lg:block xl:block">
+                            Expert Casting Solutions for a Wide Array of Industries. Combining innovation
+                            with precision to produce high-quality castings. Supporting sectors like automotive, energy,
+                            and
+                            manufacturing with products that enhance durability and efficiency.</p>
+                        <p
+                            class="text-white mt-3 text-center md:text-center lg:text-start xl:text-start block md:block lg:hidden xl:hidden text-[12px]">
+                            Innovative, precise casting solutions for a Wide Array of Industries. Enhancing durability
+                            and efficiency across sectors.</p>
+                        <button style="background: linear-gradient(90deg, rgba(136,72,15,1) 0%, rgba(238,126,26,1) 50%, rgba(136,72,15,1) 100%);
+                        " class="bg-black px-6 py-2 rounded-md font-bold text-[16px] text-white">DOWNLOAD
+                            BROCHURE</button>
+                    </div>
+                </div>
+            </div>
+            <img src="./assests/home/iron-pour-4507122_640 1.png" alt="" class="hidden md:hidden lg:block xl:block">
+            <img src="./assests/home/iron-pour-4507122_640 1 (1).png" alt="" class="block md:block lg:hidden xl:hidden">
+            <div class="w-full absolute  bottom-0 left-0 hidden md:hidden lg:block xl:block">
+                <div class="w-full relative">
+                    <img src="../dist/assests/home/Group 112.png" class="w-full" alt="">
+                    <div class="flex w-full md:w-full lg:w-auto xl:w-auto justify-start items-start flex-col gap-9 absolute right-[4vw] bottom-[20vh] text-white z-20">
+                        <div class="hidden md:hidden lg:block xl:block">
+                            <h1
+                                class="text-4xl font-bold bg-gradient-to-r from-[#88480F] via-[#EE7E1A] to-[#FED65C] bg-clip-text text-transparent">
+                                ABOUT US</h1>
+                            <div class="w-[120px] rounded h-[2px]" style="background: linear-gradient(90deg, rgba(136,72,15,1) 0%, rgba(238,126,26,1) 50%, rgba(136,72,15,1) 100%);
+                            "></div>
+                        </div>
+                        <div class="hidden md:hidden lg:block xl:block">
+                            <ul class="flex flex-col justify-start items-start gap-3 list-disc list-inside">
+                                <li class="font-semibold">Specializes in high-quality casting solutions with over a decade
+                                    of experience.</li>
+                                <li class="font-semibold">Expert in precision engineering and innovative technology.</li>
+                                <li class="font-semibold">Committed to excellence in production with state-of-the-art
+                                    facilities.</li>
+                                <li class="font-semibold">Skilled team ensures top quality and durability.</li>
+                                <li class="font-semibold">Serves automotive, industrial, and custom applications.</li>
+                                <li class="font-semibold">Trusted for reliable and efficient casting solutions.</li>
+                                <li class="font-semibold">Mission: Deliver superior products that drive customer success.
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="text-white text-center w-full block md:hidden lg:hidden xl:hidden">With over a decade of
+                            expertise, we deliver high-quality casting solutions, combining precision engineering and
+                            innovative technology. Our skilled team ensures durable, reliable products for automotive,
+                            industrial, and custom applications.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="hidden md:hidden lg:block xl:block">
+
+                <div style="background-image: url('./assests/home/wavebg.png');"
+                    class="bg-cover min-w-full  max-w-[100%] h-[200px] md:h-[200px] lg:h-[450px] xl:h-[450px] bg-no-repeat bg-center absolute bottom-0 left-0 flex flex-col justify-center items-center gap-0 md:gap-0 lg:gap-3 xl:gap-3 text-white overflow-x-hidden">
+                    <h1 class="text-[14px] md:text-[14px] lg:text-4xl xl:text-4xl font-bold mt-9">SWARNADEEP CASTINGS
+                        PRIVATE LIMITED</h1>
+                    <p class="font-semibold text-xs md:text-xs lg:text-2xl xl:text-2xl">CLW CERTIFIED CLASS A FOUNDRY
+                        UNIT</p>
+                    <img class="h-[37px] md:h-[37px] lg:h-[127px] xl:h-[127px]" src="./assests/home/Logo.png"
+                        alt="logo">
+                </div>
+            </div> -->
+            <!-- <div class="block md:block lg:hidden xl:hidden">
+
+                <div style="background-image: url('./assests/home/Group\ 113.png');"
+                    class="bg-cover min-w-full  max-w-[100%] h-[200px] md:h-[200px] lg:h-[450px] xl:h-[450px] bg-no-repeat bg-center absolute bottom-0 left-0 flex flex-col justify-center items-center gap-1 md:gap-0 lg:gap-3 xl:gap-3 text-white overflow-x-hidden">
+                    <h1 class="text-[14px] md:text-[14px] lg:text-4xl xl:text-4xl font-bold mt-9">SWARNADEEP CASTINGS
+                        PRIVATE LIMITED</h1>
+                    <p class="font-semibold text-xs md:text-xs lg:text-2xl xl:text-2xl">CLW CERTIFIED CLASS A FOUNDRY
+                        UNIT</p>
+                    <img class="h-[57px] md:h-[57px] lg:h-[127px] xl:h-[127px]" src="./assests/home/Logo.png"
+                        alt="logo">
+                </div>
+            </div> -->
+        </section>
+        <!-- about us -->
+        <section
+            class="max-w-full overflow-x-hidden h-auto md:h-auto lg:h-[550px] xl:h-[550px] block md:block lg:hidden xl:hidden bg-black text-white py-5">
+            <div class="max-w-full overflow-x-hidden h-auto md:h-auto lg:h-[550px] xl:h-[550px] flex flex-col md:flex-col lg:flex-row xl:flex-row justify-end items-start relative bg-black text-white py-5">
+                <div class="block md:block lg:hidden xl:hidden mx-auto mb-5">
+                    <h1
+                        class="text-[25px] md:text-[25px] lg:text-4xl xl:text-4xl font-bold bg-gradient-to-r from-[#88480F] via-[#EE7E1A] to-[#FED65C] bg-clip-text text-transparent">
+                        ABOUT US</h1>
+                    <div class="w-[90%] mx-auto rounded h-[2px]" style="background: linear-gradient(90deg, rgba(136,72,15,1) 0%, rgba(238,126,26,1) 50%, rgba(136,72,15,1) 100%);
+                    "></div>
+                </div>
+                <img src="./assests/home/aboutus.png" alt="about"
+                    class="inset-0 shadow-[inset_-4px_0_4px_rgba(0,0,0,0.25)] h-full block md:block lg:absolute xl:absolute left-0 top-0 z-10 w-full md:w-full lg:w-auto xl:w-[60vw]">
+                <div class="mr-16 mt-4 md:mt-4 lg:mt-16 xl:mt-16 z-20 w-full md:w-full lg:w-auto xl:w-auto">
+                    <div class="flex w-full md:w-full lg:w-auto xl:w-auto justify-start items-start flex-col gap-9">
+                        <div class="hidden md:hidden lg:block xl:block">
+                            <h1
+                                class="text-4xl font-bold bg-gradient-to-r from-[#88480F] via-[#EE7E1A] to-[#FED65C] bg-clip-text text-transparent">
+                                ABOUT US</h1>
+                            <div class="w-[120px] rounded h-[2px]" style="background: linear-gradient(90deg, rgba(136,72,15,1) 0%, rgba(238,126,26,1) 50%, rgba(136,72,15,1) 100%);
+                            "></div>
+                        </div>
+                        <div class="hidden md:hidden lg:block xl:block">
+                            <ul class="flex flex-col justify-start items-start gap-3 list-disc list-inside">
+                                <li class="font-semibold">Specializes in high-quality casting solutions with over a decade
+                                    of experience.</li>
+                                <li class="font-semibold">Expert in precision engineering and innovative technology.</li>
+                                <li class="font-semibold">Committed to excellence in production with state-of-the-art
+                                    facilities.</li>
+                                <li class="font-semibold">Skilled team ensures top quality and durability.</li>
+                                <li class="font-semibold">Serves automotive, industrial, and custom applications.</li>
+                                <li class="font-semibold">Trusted for reliable and efficient casting solutions.</li>
+                                <li class="font-semibold">Mission: Deliver superior products that drive customer success.
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="text-white text-center w-full block md:hidden lg:hidden xl:hidden">With over a decade of
+                            expertise, we deliver high-quality casting solutions, combining precision engineering and
+                            innovative technology. Our skilled team ensures durable, reliable products for automotive,
+                            industrial, and custom applications.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- our services -->
+        <section
+            class="bg-black w-full overflow-x-hidden flex justify-center items-center flex-col py-10 text-white gap-10">
+            <div class="">
+                <h1
+                    class="text-[24px] md:text-[24px] lg:text-4xl xl:text-4xl font-bold bg-gradient-to-r from-[#88480F] via-[#EE7E1A] to-[#FED65C] bg-clip-text text-transparent">
+                    OUR SERVICES</h1>
+                <div class="w-full px-4 rounded h-[2px]" style="background: linear-gradient(90deg, rgba(136,72,15,1) 0%, rgba(238,126,26,1) 50%, rgba(136,72,15,1) 100%);
+                "></div>
+            </div>
+            <div
+                class="flex flex-col md:flex-col lg:flex-row xl:flex-row items-center md:items-center lg:items-baseline xl:items-baseline w-[70%] justify-center md:justify-center lg:justify-between xl:justify-between gap-8">
+                <div
+                    class="flex flex-col justify-center items-center gap-1 hover:scale-110 transition-all duration-200 hover:bg-[#0D0D0D] p-4 rounded-lg">
+                    <img src="./assests/home/leading.png" alt="leading">
+                    <p class="font-semibold">Industry-Leading Quality</p>
+                </div>
+                <div
+                    class="flex flex-col justify-center items-center gap-1 hover:scale-110 transition-all duration-200 hover:bg-[#0D0D0D] p-4 rounded-lg">
+                    <img src="./assests/home/expertise.png" alt="leading">
+                    <p class="font-semibold">Industry-Leading Quality</p>
+                </div>
+                <div
+                    class="flex flex-col justify-center items-center gap-1 hover:scale-110 transition-all duration-200 hover:bg-[#0D0D0D] p-4 rounded-lg">
+                    <img src="./assests/home/workforce.png" alt="leading">
+                    <p class="font-semibold">Industry-Leading Quality</p>
+                </div>
+                <div
+                    class="flex flex-col justify-center items-center gap-1 hover:scale-110 transition-all duration-200 hover:bg-[#0D0D0D] p-4 rounded-lg">
+                    <img src="./assests/home/customerSatisfaction.png" alt="leading">
+                    <p class="font-semibold">Industry-Leading Quality</p>
+                </div>
+            </div>
+        </section>
+        <!--industries we serve  -->
+        <section
+            class="bg-black w-full overflow-x-hidden flex justify-center items-center flex-col pt-10 pb-28 text-white gap-10">
+            <div class="">
+                <h1
+                    class="text-[24px] md:text-[24px] lg:text-4xl xl:text-4xl font-bold bg-gradient-to-r from-[#88480F] via-[#EE7E1A] to-[#FED65C] bg-clip-text text-transparent">
+                    INDUSTRIES WE SERVE</h1>
+                <div class="w-full px-4 rounded h-[2px]" style="background: linear-gradient(90deg, rgba(136,72,15,1) 0%, rgba(238,126,26,1) 50%, rgba(136,72,15,1) 100%);
+                "></div>
+            </div>
+            <div class="flex w-[95%] items-start justify-start gap-20 container overflow-hidden">
+                <div class="min-w-[400px] h-[200px] rounded-md relative flex justify-center items-center card">
+                    <img class="w-full h-full rounded-lg"
+                        src="./assests/home/crousel/HD-wallpaper-customize-indian-railways-theme-indian-train.jpg"
+                        alt="mill">
+                    <div class="absolute text-white text-3xl font-bold tracking-wider w-full h-full flex justify-center items-center "
+                        style="background-color: #201f1f7d;">Railways</div>
+                </div>
+                <div class="min-w-[400px] h-[200px] rounded-md relative flex justify-center items-center card">
+                    <img class="w-full h-full rounded-lg" src="./assests/home/crousel/industry-2023588_1280.jpg"
+                        alt="mill">
+                    <div class="absolute text-white text-3xl font-bold tracking-wider w-full h-full flex justify-center items-center "
+                        style="background-color: #201f1f7d;">Mining</div>
+                </div>
+                <div class="min-w-[400px] h-[200px] rounded-md relative flex justify-center items-center card">
+                    <img class="w-full h-full rounded-lg"
+                        src="./assests/home/crousel/StockCake-Industrial Power Turbine_1723585608.jpg" alt="mill">
+                    <div class="absolute text-white text-3xl font-bold tracking-wider w-full h-full flex justify-center items-center "
+                        style="background-color: #201f1f7d;">Power & Engineering</div>
+                </div>
+                <div class="min-w-[400px] h-[200px] rounded-md relative flex justify-center items-center card">
+                    <img class="w-full h-full rounded-lg"
+                        src="./assests/home/crousel/StockCake-Industrial Precision Engineering_1723585372.jpg"
+                        alt="mill">
+                    <div class="absolute text-white text-3xl font-bold tracking-wider w-full h-full flex justify-center items-center "
+                        style="background-color: #201f1f7d;">Steel & Metallurgy</div>
+                </div>
+                <div class="min-w-[400px] h-[200px] rounded-md relative flex justify-center items-center card">
+                    <img class="w-full h-full rounded-lg"
+                        src="./assests/home/crousel/StockCake-Automobile Assembly Line_1723584664.jpg" alt="mill">
+                    <div class="absolute text-white text-3xl font-bold tracking-wider w-full h-full flex justify-center items-center "
+                        style="background-color: #201f1f7d;">Automobile</div>
+                </div>
+                <div class="min-w-[400px] h-[200px] rounded-md relative flex justify-center items-center card">
+                    <img class="w-full h-full rounded-lg"
+                        src="./assests/home/crousel/StockCake-Industrial Sunset Beauty_1723585789.jpg" alt="mill">
+                    <div class="absolute text-white text-3xl font-bold tracking-wider w-full h-full flex justify-center items-center "
+                        style="background-color: #201f1f7d;">Oil & Gas</div>
+                </div>
+                <div class="min-w-[400px] h-[200px] rounded-md relative flex justify-center items-center card">
+                    <img class="w-full h-full rounded-lg"
+                        src="./assests/home/crousel/StockCake-Precision Filling Operation_1723650580.jpg" alt="mill">
+                    <div class="absolute text-white text-3xl font-bold tracking-wider w-full h-full flex justify-center items-center "
+                        style="background-color: #201f1f7d;">PHARMACEUTICAL</div>
+                </div>
+                <div class="min-w-[400px] h-[200px] rounded-md relative flex justify-center items-center card">
+                    <img class="w-full h-full rounded-lg"
+                        src="./assests/home/crousel/StockCake-Agriculture Technology Integration_1723650514.jpg"
+                        alt="mill">
+                    <div class="absolute text-white text-3xl font-bold tracking-wider w-full h-full flex justify-center items-center "
+                        style="background-color: #201f1f7d;">AGRICULTURE</div>
+                </div>
+                <div class="min-w-[400px] h-[200px] rounded-md relative flex justify-center items-center card">
+                    <img class="w-full h-full rounded-lg"
+                        src="./assests/home/crousel/StockCake-Construction Site Planning_1723650490.jpg" alt="mill">
+                    <div class="absolute text-white text-3xl font-bold tracking-wider w-full h-full flex justify-center items-center "
+                        style="background-color: #201f1f7d;">CONSTRUCTION</div>
+                </div>
+                <div class="min-w-[400px] h-[200px] rounded-md relative flex justify-center items-center card">
+                    <img class="w-full h-full rounded-lg"
+                        src="./assests/home/crousel/StockCake-Fruit Processing Line_1723650433.jpg" alt="mill">
+                    <div class="absolute text-white text-3xl font-bold tracking-wider w-full h-full flex justify-center items-center "
+                        style="background-color: #201f1f7d;">FOOD PROCESSING</div>
+                </div>
+                <div class="min-w-[400px] h-[200px] rounded-md relative flex justify-center items-center card">
+                    <img class="w-full h-full rounded-lg"
+                        src="./assests/home/crousel/StockCake-Solar Energy Fields_1723650358.jpg" alt="mill">
+                    <div class="absolute text-white text-3xl font-bold tracking-wider w-full h-full flex justify-center items-center "
+                        style="background-color: #201f1f7d;">ENERGY</div>
+                </div>
+                <div class="min-w-[400px] h-[200px] rounded-md relative flex justify-center items-center card">
+                    <img class="w-full h-full rounded-lg"
+                        src="./assests/home/crousel/StockCake-Industrial Paper Mill_1723650309.jpg" alt="mill">
+                    <div class="absolute text-white text-3xl font-bold tracking-wider w-full h-full flex justify-center items-center "
+                        style="background-color: #201f1f7d;">PAPER & PULP</div>
+                </div>
+                <div class="min-w-[400px] h-[200px] rounded-md relative flex justify-center items-center card">
+                    <img class="w-full h-full rounded-lg" src="./assests/home/crousel/vessel-1493289_1280.jpg"
+                        alt="mill">
+                    <div class="absolute text-white text-3xl font-bold tracking-wider w-full h-full flex justify-center items-center "
+                        style="background-color: #201f1f7d;">MARINE</div>
+                </div>
+                <div class="min-w-[400px] h-[200px] rounded-md relative flex justify-center items-center card">
+                    <img class="w-full h-full rounded-lg"
+                        src="./assests/home/crousel/StockCake-Tanks Advancing Dust_1723829850.jpg" alt="mill">
+                    <div class="absolute text-white text-3xl font-bold tracking-wider w-full h-full flex justify-center items-center "
+                        style="background-color: #201f1f7d;">DEFENCE</div>
+                </div>
+                <div class="min-w-[400px] h-[200px] rounded-md relative flex justify-center items-center card">
+                    <img class="w-full h-full rounded-lg"
+                        src="./assests/home/crousel/StockCake-Industrial Facility Inspection_1723830080.jpg" alt="mill">
+                    <div class="absolute text-white text-3xl font-bold tracking-wider w-full h-full flex justify-center items-center text-center"
+                        style="background-color: #201f1f7d;">CHEMICAL & PETROCHEMICAL</div>
+                </div>
+            </div>
+        </section>
+        <!-- footer -->
+        <footer class="bg-greybg w-full py-10 px-4" style="background-color: #2C2A28;">
+            <div
+                class="flex flex-col md:flex-col lg:flex-row xl:flex-row justify-start md:justify-start lg:justify-start xl:justify-start items-start md:items-start lg:items-start xl:items-start gap-3 md:gap-3 lg:gap-52 xl:gap-52 w-full md:w-full lg:w-[80%] xl:w-[80%] mx-auto">
+                <div class="flex flex-col justify-center items-center gap-2">
+                    <img src="./assests/home/Logo.png" alt="logo"
+                        class="h-[69px] md:h-[69px] lg:h-[167px] xl:h-[167px]">
+                    <div class="flex ">
+                        <img class="h-[25px] md:h-[30px] lg:h-[45px] xl:h-[45px]"
+                            src="./assests/home/linkedin_svgrepo.com.png" alt="linkedin">
+                        <img class="h-[25px] md:h-[30px] lg:h-[45px] xl:h-[45px]"
+                            src="./assests/home/icons8-facebook 1.png" alt="">
+                    </div>
+                </div>
+                <div>
+                    <h1 class="font-bold text-[18px] md:text-[18px] lg:text-2xl xl:text-2xl text-white">Quick Links</h1>
+                    <div class="mt-3 text-white/80 flex flex-col gap-1 text-[12px] md:text-[8px] lg:text-lg xl:text-lg">
+                        <div>Home</div>
+                        <div><a href="./about.html">About Us</a></div>
+                        <div><a href="./services.html">Services</a></div>
+                        <div><a href="./infrastructure.html">Infrastructure</a></div>
+                        <div><a href="./certificate.html">Certification</a></div>
+                        <div><a href="./product.html">Products</a></div>
+                    </div>
+                </div>
+                <div class="w-[350px]">
+                    <h1 class="font-bold text-[18px] md:text-[18px] lg:text-2xl xl:text-2xl text-white">Get In Touch
+                    </h1>
+                    <div class="flex flex-col justify-start items-start gap-2 mt-3">
+                        <div class="flex justify-center items-center text-white/80 gap-2">
+                            <img src="./assests/home/location-pin_svgrepo.com.png" alt="location-pin_svgrepo"
+                                class="h-[16px] md:h-[16px] lg:h-[40px] xl:h-[40px]">
+                            <div class="text-[12px] md:text-[12px] lg:text-lg xl:text-lg">Bus Stop, NH2, Baktarnagar,
+                                Kajora, West Bengal 713376</div>
+                        </div>
+                        <div class="flex justify-center items-center text-white gap-2">
+                            <img src="./assests/home/phone_svgrepo.com.png" alt="location-pin_svgrepo"
+                                class="h-[16px] md:h-[16px] lg:h-[40px] xl:h-[40px]">
+                            <div class="text-[12px] md:text-[12px] lg:text-lg xl:text-lg">+91 8158966014</div>
+                        </div>
+                    </div>
+                    <button style="background: linear-gradient(90deg, rgba(136,72,15,1) 0%, rgba(238,126,26,1) 50%, rgba(136,72,15,1) 100%);
+                    "
+                        class="bg-black px-6 py-2 w-full rounded-md font-bold text-[12px] md:text-[12px] lg:text-[16px] xl:text-[16px] mt-3 text-white">DOWNLOAD
+                        BROCHURE</button>
+                </div>
+
+            </div>
+        </footer>
+    </div>
+</body>
+<script>
+    function toggleMenu() {
+        let bar = document.getElementById('toggle');
+        bar.classList.toggle('hidden');
+        console.log('Menu toggled');
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="./output.css">
+    <style>
+  /* Custom active class for Tailwind */
+  .active-category {
+    @apply text-orange-500 font-bold;
+  }
+</style>
+
+</head>
+
+<body class="w-[100vw] h-auto overflow-x-hidden">
+    <div class="w-screen max-w-[100vw] h-auto box-border m-0 p-0 overflow-x-hidden">
+        <!-- navbar -->
+        <nav style="background-color: #2C2A28;"
+            class="w-full flex justify-around items-center gap-12 px-4 md:px-4 lg:px-8 xl:px-8 py-3 bg-greybg text-white overflow-x-hidden">
+            <div class="flex justify-start items-center gap-2">
+                <img class="h-[37px] md:h-[37px] lg:h-[57px] xl:h-[57px]" src="./assests/home/Logo.png" alt="logo">
+                <h2 class="whitespace-nowrap font-bold text-xs md:text-base lg:text-base xl:text-base ">SWARNDEEP
+                    CASTINGS <br class="hidden md:hidden lg:block xl:block">PRIVATE LIMITED</h2>
+            </div>
+            <img class="block md:block lg:hidden xl:hidden" src="./assests/home/hamburger-menu_svgrepo.com.png"
+                alt="bar" onclick="toggleMenu()">
+            <div class="hidden absolute top-14 text-white z-20 w-screen h-screen bg-black " id="toggle">
+                <div class="flex flex-col justify-start items-start gap-5 text-[20px] px-10 py-10">
+                    <a class=" w-full" href="./index.html">
+                        <div class="font-semibold whitespace-nowrap w-full pb-1">
+                            Home</div>
+                    </a>
+                    <a href="./about.html">
+                        <div class="font-semibold whitespace-nowrap">About Us</div>
+                    </a>
+                    <a href="./services.html">
+                        <div class="font-semibold whitespace-nowrap">Services</div>
+                    </a>
+                    <a href="./infrastructure.html">
+                        <div class="font-semibold whitespace-nowrap">Infrastructure</div>
+                    </a>
+                    <a href="./certificate.html">
+                        <div class="font-semibold whitespace-nowrap">Certification</div>
+                    </a>
+                    <a href="./product.html">
+                        <div class="font-semibold whitespace-nowrap" style="color: #EE7E1A;">Products</div>
+                    </a>
+                    <button style="background: linear-gradient(90deg, rgba(136,72,15,1) 0%, rgba(238,126,26,1) 50%, rgba(136,72,15,1) 100%);
+" class="bg-black px-6 py-2 rounded-md font-bold text-[16px] w-full">DOWNLOAD
+                        BROCHURE</button>
+                </div>
+            </div>
+            <div class="hidden md:hidden lg:block xl:block ">
+
+                <div class="flex justify-center items-center gap-5 text-[16px]">
+                    <a href="./index.html">
+                        <div class="font-semibold whitespace-nowrap ">Home</div>
+                    </a>
+                    <a href="./about.html">
+                        <div class="font-semibold whitespace-nowrap">About Us</div>
+                    </a>
+                    <a href="./services.html">
+                        <div class="font-semibold whitespace-nowrap">Services</div>
+                    </a>
+                    <a href="./infrastructure.html">
+                        <div class="font-semibold whitespace-nowrap">Infrastructure</div>
+                    </a>
+                    <a href="./certificate.html">
+                        <div class="font-semibold whitespace-nowrap">Certification</div>
+                    </a>
+                    <a href="./product.html">
+                        <div class="font-semibold whitespace-nowrap" style="color: #EE7E1A;">Products</div>
+                    </a>
+                </div>
+            </div>
+            <button style="background: linear-gradient(90deg, rgba(136,72,15,1) 0%, rgba(238,126,26,1) 50%, rgba(136,72,15,1) 100%);
+" class="bg-black px-6 py-2 rounded-md font-bold text-[16px] hidden md:hidden lg:block xl:block ">DOWNLOAD
+                BROCHURE</button>
+        </nav>
+        <!--infrastructure  -->
+        <section class="bg-black w-full flex justify-center items-center flex-col py-10 text-white gap-10">
+            <div class="">
+                <h1
+                    class="text-[24px] md:text-[24px] lg:text-4xl xl:text-4xl font-bold bg-gradient-to-r from-[#88480F] via-[#EE7E1A] to-[#FED65C] bg-clip-text text-transparent">
+                    PRODUCT EXAMPLES</h1>
+                <div class="w-full px-4 rounded h-[2px]" style="background: linear-gradient(90deg, rgba(136,72,15,1) 0%, rgba(238,126,26,1) 50%, rgba(136,72,15,1) 100%);
+            "></div>
+            </div>
+            <div class=" w-[80%] flex  flow-row justify-start items-start gap-16">
+                <div class="flex flex-col justify-start items-start w-[23%] gap-5">
+                    <h1 class="text-2xl font-bold">PRODUCT EXAMPLES</h1>
+                    <div id="categoryList" class="flex flex-col justify-start items-start w-full gap-4">
+                        <div data-category="tractionMotor" class="pb-[1.5px] w-full cursor-pointer category-item"
+                            style="background: linear-gradient(90deg, rgba(136,72,15,1) 0%, rgba(238,126,26,1) 50%, rgba(136,72,15,1) 100%);">
+                            <div class="bg-black whitespace-nowrap pb-[3px] w-full font-semibold text-base">HOLDER FOR
+                                TRACTION MOTOR</div>
+                        </div>
+                        <div data-category="housing" class="pb-[1.5px] w-full cursor-pointer category-item"
+                            style="background: linear-gradient(90deg, rgba(136,72,15,1) 0%, rgba(238,126,26,1) 50%, rgba(136,72,15,1) 100%);">
+                            <div class="bg-black whitespace-nowrap pb-[3px] w-full font-semibold text-base">Housing
+                            </div>
+                        </div>
+                        <div data-category="wheelSetGuide" class="pb-[1.5px] w-full cursor-pointer category-item"
+                            style="background: linear-gradient(90deg, rgba(136,72,15,1) 0%, rgba(238,126,26,1) 50%, rgba(136,72,15,1) 100%);">
+                            <div class="bg-black whitespace-nowrap pb-[3px] w-full font-semibold text-base"
+                                >Wheel Set Guide</div>
+                        </div>
+                        <div data-category="springGuide" class="pb-[1.5px] w-full cursor-pointer category-item"
+                            style="background: linear-gradient(90deg, rgba(136,72,15,1) 0%, rgba(238,126,26,1) 50%, rgba(136,72,15,1) 100%);">
+                            <div class="bg-black whitespace-nowrap pb-[3px] w-full font-semibold text-base">Spring Guide
+                            </div>
+                        </div>
+                        <div data-category="pivot" class="pb-[1.5px] w-full cursor-pointer category-item"
+                            style="background: linear-gradient(90deg, rgba(136,72,15,1) 0%, rgba(238,126,26,1) 50%, rgba(136,72,15,1) 100%);">
+                            <div class="bg-black whitespace-nowrap pb-[3px] w-full font-semibold text-base">Pivot</div>
+                        </div>
+                        <div data-category="starterChamber" class="pb-[1.5px] w-full cursor-pointer category-item"
+                            style="background: linear-gradient(90deg, rgba(136,72,15,1) 0%, rgba(238,126,26,1) 50%, rgba(136,72,15,1) 100%);">
+                            <div class="bg-black whitespace-nowrap pb-[3px] w-full font-semibold text-base">Starter
+                                Chamber</div>
+                        </div>
+                        <div data-category="suspensionTube" class="pb-[1.5px] w-full cursor-pointer category-item"
+                            style="background: linear-gradient(90deg, rgba(136,72,15,1) 0%, rgba(238,126,26,1) 50%, rgba(136,72,15,1) 100%);">
+                            <div class="bg-black whitespace-nowrap pb-[3px] w-full font-semibold text-base">MS
+                                Suspension Tube</div>
+                        </div>
+
+                    </div>
+                </div>
+                <!--Cards  -->
+                <div id="imageGallery" class="flex w-[65%] flex-wrap items-center justify-center gap-y-8 gap-x-8">
+
+                    <!-- <div class="w-[230px] flex justify-center items-center flex-col border border-[#2C2A28]">
+                        <img src="./assests/products/WhatsApp Image 2024-08-19 at 10.30.40 PM 1.png" alt="molding section" class="">
+                        <p class="bg-[#2C2A28] py-4 text-lg font-bold w-full text-center ">SPECTRO LAB</p>
+                    </div>
+
+                    <div class="w-[230px] flex justify-center items-center flex-col border border-[#2C2A28]">
+                        <img src="./assests/products/WhatsApp Image 2024-08-19 at 10.30.40 PM 1.png" alt="molding section" class="">
+                        <p class="bg-[#2C2A28] py-4 text-lg font-bold w-full text-center ">SPECTRO LAB</p>
+                    </div>
+
+                    <div class="w-[230px] flex justify-center items-center flex-col border border-[#2C2A28]">
+                        <img src="./assests/products/WhatsApp Image 2024-08-19 at 10.30.40 PM 1.png" alt="molding section" class="">
+                        <p class="bg-[#2C2A28] py-4 text-lg font-bold w-full text-center ">SPECTRO LAB</p>
+                    </div>
+
+                    <div class="w-[230px] flex justify-center items-center flex-col border border-[#2C2A28]">
+                        <img src="./assests/products/WhatsApp Image 2024-08-19 at 10.30.40 PM 1.png" alt="molding section" class="">
+                        <p class="bg-[#2C2A28] py-4 text-lg font-bold w-full text-center ">SPECTRO LAB</p>
+                    </div>
+
+                    <div class="w-[230px] flex justify-center items-center flex-col border border-[#2C2A28]">
+                        <img src="./assests/products/WhatsApp Image 2024-08-19 at 10.30.40 PM 1.png" alt="molding section" class="">
+                        <p class="bg-[#2C2A28] py-4 text-lg font-bold w-full text-center ">SPECTRO LAB</p>
+                    </div>
+
+                    <div class="w-[230px] flex justify-center items-center flex-col border border-[#2C2A28]">
+                        <img src="./assests/products/WhatsApp Image 2024-08-19 at 10.30.40 PM 1.png" alt="molding section" class="">
+                        <p class="bg-[#2C2A28] py-4 text-lg font-bold w-full text-center ">SPECTRO LAB</p>
+                    </div> -->
+
+                </div>
+            </div>
+        </section>
+        <!--footer  -->
+        <footer class="bg-greybg w-full py-10 px-4" style="background-color: #2C2A28;">
+            <div
+                class="flex flex-col md:flex-col lg:flex-row xl:flex-row justify-start md:justify-start lg:justify-start xl:justify-start items-start md:items-start lg:items-start xl:items-start gap-3 md:gap-3 lg:gap-52 xl:gap-52 w-full md:w-full lg:w-[80%] xl:w-[80%] mx-auto">
+                <div class="flex flex-col justify-center items-center gap-2">
+                    <img src="./assests/home/Logo.png" alt="logo"
+                        class="h-[69px] md:h-[69px] lg:h-[167px] xl:h-[167px]">
+                    <div class="flex ">
+                        <img class="h-[25px] md:h-[30px] lg:h-[45px] xl:h-[45px]"
+                            src="./assests/home/linkedin_svgrepo.com.png" alt="linkedin">
+                        <img class="h-[25px] md:h-[30px] lg:h-[45px] xl:h-[45px]"
+                            src="./assests/home/icons8-facebook 1.png" alt="">
+                    </div>
+                </div>
+                <div>
+                    <h1 class="font-bold text-[18px] md:text-[18px] lg:text-2xl xl:text-2xl text-white">Quick Links</h1>
+                    <div class="mt-3 text-white/80 flex flex-col gap-1 text-[12px] md:text-[8px] lg:text-lg xl:text-lg">
+                        <div>Home</div>
+                        <div><a href="./about.html">About Us</a></div>
+                        <div><a href="./services.html">Services</a></div>
+                        <div><a href="./infrastructure.html">Infrastructure</a></div>
+                        <div><a href="./certificate.html">Certification</a></div>
+                        <div><a href="./product.html">Products</a></div>
+                    </div>
+                </div>
+                <div class="w-[350px]">
+                    <h1 class="font-bold text-[18px] md:text-[18px] lg:text-2xl xl:text-2xl text-white">Get In Touch
+                    </h1>
+                    <div class="flex flex-col justify-start items-start gap-2 mt-3">
+                        <div class="flex justify-center items-center text-white/80 gap-2">
+                            <img src="./assests/home/location-pin_svgrepo.com.png" alt="location-pin_svgrepo"
+                                class="h-[16px] md:h-[16px] lg:h-[40px] xl:h-[40px]">
+                            <div class="text-[12px] md:text-[12px] lg:text-lg xl:text-lg">Bus Stop, NH2, Baktarnagar,
+                                Kajora, West Bengal 713376</div>
+                        </div>
+                        <div class="flex justify-center items-center text-white gap-2">
+                            <img src="./assests/home/phone_svgrepo.com.png" alt="location-pin_svgrepo"
+                                class="h-[16px] md:h-[16px] lg:h-[40px] xl:h-[40px]">
+                            <div class="text-[12px] md:text-[12px] lg:text-lg xl:text-lg">+91 8158966014</div>
+                        </div>
+                    </div>
+                    <button style="background: linear-gradient(90deg, rgba(136,72,15,1) 0%, rgba(238,126,26,1) 50%, rgba(136,72,15,1) 100%);
+                    "
+                        class="bg-black px-6 py-2 w-full rounded-md font-bold text-[12px] md:text-[12px] lg:text-[16px] xl:text-[16px] mt-3 text-white">DOWNLOAD
+                        BROCHURE</button>
+                </div>
+
+            </div>
+        </footer>
+    </div>
+</body>
+<script>
+    function toggleMenu() {
+        let bar = document.getElementById('toggle');
+        bar.classList.toggle('hidden');
+        console.log('Menu toggled');
+    }
+
+    const images = {
+    tractionMotor: [
+        'holder.jpeg',
+        'holder1.jpg',
+    ],
+    housing: [
+        'housing1.jpeg',
+        'housing2.jpg',
+        'housing3.jpg',
+        'housing4.jpeg'
+    ],
+    wheelSetGuide: [
+        'wheel set guide1.jpg',
+        'wheel set guide2.jpg',
+    ],
+    springGuide: [
+        'sprin guide3.png',
+        'spring guide2.png',
+    ],
+    pivot: [
+        'pivot1.jpg'
+    ],
+    starterChamber: [
+        'starter chamber.jpeg',
+    ],
+    suspensionTube: [
+        'ms suspension tube.png',
+        'ms suspension tube 2.jpeg',
+    ],
+};
+
+function loadImages(category) {
+    const gallery = document.getElementById('imageGallery');
+    gallery.innerHTML = ''; // Clear previous images
+
+    // Remove the active text color from all categories
+    document.querySelectorAll('#categoryList .category-item').forEach(item => {
+        item.querySelector('div').classList.remove('text-[#EE7E1A]');
+        item.querySelector('div').classList.add('text-white');
+    });
+
+    // Add the active text color to the selected category
+    const selectedCategory = document.querySelector(`[data-category="${category}"] .bg-black`);
+    if (selectedCategory) {
+        selectedCategory.classList.remove('text-white');
+        selectedCategory.classList.add('text-[#EE7E1A]');
+    } else {
+        console.warn(`No element found with data-category="${category}"`);
+    }
+
+    // Load new images
+    images[category].forEach(imgSrc => {
+        const imgElement = document.createElement('div');
+        imgElement.className = 'w-[230px] bg-black flex justify-center items-center flex-col border border-[#2C2A28]';
+        imgElement.innerHTML = `
+            <img src="./assests/products/products/${imgSrc}" alt="molding section" class="w-[230px] rounded-full h-[230px]">
+            <p class="bg-[#2C2A28] py-4 text-lg font-bold w-full text-center">SPECTRO LAB</p>
+        `;
+        gallery.appendChild(imgElement);
+    });
+}
+
+// Event listeners for category change
+document.querySelectorAll('#categoryList .category-item').forEach(item => {
+    item.addEventListener('click', () => {
+        const category = item.getAttribute('data-category');
+        loadImages(category);
+    });
+});
+
+// Load images for "Holder for Traction Motor" by default when the page loads
+window.onload = () => {
+    loadImages('tractionMotor');
+};
+
+
+</script>
+
+</html>
